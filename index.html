@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AudioScape | Audio Reactive Visualizer</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- =========================
+             HEADER
+        ========================== -->
+
+        <header>
+
+            <h1>🎵 AudioScape</h1>
+
+            <p>
+                Professional Real-Time Audio Visualizer for Music, DJs & Live Performances
+            </p>
+
+        </header>
+
+        <!-- =========================
+             TOP CONTROLS
+        ========================== -->
+
+        <section class="top-controls">
+
+            <label class="upload-btn">
+
+                Upload Audio
+
+                <input
+                    type="file"
+                    id="audioFile"
+                    accept="audio/*"
+                >
+
+            </label>
+
+            <select id="themeSelect">
+
+                <option value="rgb">
+                    🌈 RGB Spectrum
+                </option>
+
+                <option value="blue">
+                    🔵 Blue Spectrum
+                </option>
+
+                <option value="3band">
+                    🎚️ 3-Band Spectrum
+                </option>
+
+            </select>
+
+            <button id="fullscreenBtn">
+
+                ⛶ Fullscreen
+
+            </button>
+
+        </section>
+
+        <!-- =========================
+             VISUALIZER
+        ========================== -->
+
+        <section class="visualizer-section">
+
+            <canvas id="visualizer"></canvas>
+
+        </section>
+
+        <!-- =========================
+             PLAYER CONTROLS
+        ========================== -->
+
+        <section class="player-controls">
+
+            <button id="playBtn">
+                ▶ Play
+            </button>
+
+            <button id="pauseBtn">
+                ⏸ Pause
+            </button>
+
+            <button id="stopBtn">
+                ⏹ Stop
+            </button>
+
+        </section>
+
+        <!-- =========================
+             AUDIO TIMELINE
+        ========================== -->
+
+        <section class="timeline">
+
+            <span id="currentTime">
+                00:00
+            </span>
+
+            <input
+                type="range"
+                id="progress"
+                min="0"
+                max="100"
+                value="0"
+            >
+
+            <span id="duration">
+                00:00
+            </span>
+
+        </section>
+
+        <!-- =========================
+             VOLUME CONTROL
+        ========================== -->
+
+        <section class="volume-control">
+
+            <label for="volume">
+
+                🔊 Volume
+
+            </label>
+
+            <input
+                type="range"
+                id="volume"
+                min="0"
+                max="1"
+                step="0.01"
+                value="1"
+            >
+
+        </section>
+
+        <!-- =========================
+             STATUS BAR
+        ========================== -->
+
+        <section class="status-bar">
+
+            <div>
+
+                <strong>Visualizer:</strong>
+
+                <span id="currentTheme">
+
+                    RGB Spectrum
+
+                </span>
+
+            </div>
+
+            <div>
+
+                <strong>FPS:</strong>
+
+                <span id="fpsCounter">
+
+                    0
+
+                </span>
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+             FOOTER
+        ========================== -->
+
+        <footer>
+
+            <p>
+
+                Built with HTML5 Canvas, JavaScript & Web Audio API
+
+            </p>
+
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
